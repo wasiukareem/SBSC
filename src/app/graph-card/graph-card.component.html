@@ -1,0 +1,36 @@
+<div class="card {{cardBackgroundClass}}">
+    <div class="card-header">
+        <h5 class="card-title">{{cardTitle}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{cardSubTitle}}</h6>
+    </div>
+    <div class="chart">
+        <canvas style="height: 250px; width: 100%; padding: 0.35rem" #cardChart>
+            {{ cardChart }}
+        </canvas>
+    </div>
+    <div class="card-body {{cardBodyBackgroundClass}}">
+        <div class="row">
+            <div class="col-md-6">
+                <p><small class="text-muted">{{cardFirstLabel}}</small>{{total | number}}</p>
+            </div>
+            <div class="col-md-6">
+                <div class="selector">
+                    <label>
+                        <input type="radio" name="0"> {{chartLabels[0]}}
+                    </label>
+                </div>
+                <div class="selector">
+                    <label>
+                        <input type="radio" name="1"> {{chartLabels[1]}}
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p><small class="text-muted">{{cardSecondLabel}}</small>{{spent | number}}</p>
+            </div>
+            <div class="col-md-6">
+                <p><small class="text-muted">{{cardThirdLabel}}</small>{{(total-spent) | number}}</p>
+            </div>
+        </div>
+    </div>
+</div>

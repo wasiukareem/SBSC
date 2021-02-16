@@ -1,0 +1,64 @@
+.card {
+    border:none;
+    border-radius: 10px;
+    padding:15px;
+}
+
+.card-header {
+    border:none;
+    background:none;
+}
+
+.card-body {
+    border:none;
+    box-shadow:none;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.card-body p {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.09625px;
+    color: #19304D;
+}
+
+.card-body p small {
+    display:block;
+    font-weight: normal;
+}
+
+.play-card-body {
+    background:#E2EDF8;
+}
+
+.work-card-body {
+    background:#FFFBF5;
+}
+
+.asset-card-body {
+    background: rgba(0,0,0,0.2);
+    color:#fff !important;
+}
+
+.white-bg {
+    background:#fff;
+}
+
+.asset-background {
+    background: linear-gradient(0deg, #0F9CDA 26.48%, #00C49A 175.16%);
+    color:#fff !important;
+}
+
+.asset-background .card-subtitle {
+    color:#fff !important;
+}
+
+.asset-background p {
+    color:#fff !important;
+}
+
+.asset-background p small {
+    color:#fff !important;
+}

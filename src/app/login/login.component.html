@@ -1,0 +1,25 @@
+<div class="row  col-md-12">
+    <div class="col-md-9">
+        <div class="login-cover"></div>
+    </div>
+    <div class="col-md-3">
+        <div class="login-section container">
+            <div class="title"><span>S</span> Express Lands</div>
+            <h1>Login to<br />your account</h1>
+            <p>Welcome back! Please login to your account</p>
+            <div class="alert alert-{{errorClass}}" *ngIf="formSubmitted && isError">{{errorMessage}}</div>
+            <form class="form" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <div class="mb-4">    
+                    <input class="form-control" type="text" placeholder="Enter Email Address" name="email" ngModel>
+                </div>
+                <div class="mb-4">    
+                    <input class="form-control" type="password" placeholder="Enter password" name="password" ngModel>
+                </div>
+                <div class="mb-4 col-xs-12">    
+                    <button type="submit" class="btn login-btn col-12">LOGIN</button>
+                </div>
+                <p class="text-center"><a href="#">Forget password?</a></p>
+            </form>
+        </div>
+    </div>
+</div>

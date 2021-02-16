@@ -1,0 +1,38 @@
+.floating-box {
+    margin-top:20px;
+    padding:14px;
+    box-shadow: 0px 10px 20px rgba(184, 193, 209, 0.1);
+    border-radius: 10px;
+}
+
+.floating-box p {
+    color:#19304D;
+    float:left;
+    margin-bottom:0px;
+}
+
+.floating-box p span {
+    display:block;
+    font-size:10px;
+    color:#383F51;
+}
+
+.floating-box a {
+    float:right;
+    border-radius: 10px;
+}
+
+.notification a {
+    color:#fff;
+}
+
+.user a {
+    color:#fff;
+    font-size:8px;
+    padding:5px;
+}
+
+.user a img { 
+    display:block;
+    margin:auto;
+}

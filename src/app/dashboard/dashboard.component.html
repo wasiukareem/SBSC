@@ -1,0 +1,134 @@
+<div class="row col-md-12" style="background:#F2F7FC;">
+    <div class="col-md-3 sidebar-container" *ngIf="showSidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="{{contentClass}}">
+        <div class="row header-bar">
+            <div class="col-md-6">
+                <a class="menu-toggle" (click)="toggleSidebar()">
+                    <img src="../assets/images/sidebar-toggle.png" />
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <app-notification-box
+                            [type]="allNotification"
+                            [heading]="allNotificationHeading"
+                            [description]="allNotificationDescription"
+                            [buttonText]="allNotificationCount"
+                            [buttonImage]="noIcon"
+                            [url]="notificationUrl"
+                            [_background]="allNotificationBackground"
+                        >
+                        </app-notification-box>
+                    </div>
+                    <div class="col-md-6">
+                        <app-notification-box
+                            [type]="userNotification"
+                            [heading]="userNotificationHeading"
+                            [description]="userNotificationDescription"
+                            [buttonText]="logoutText"
+                            [buttonImage]="logoutIcon"
+                            [url]="logoutUrl"
+                            [_background]="userNotificationBackground"
+                        >
+                        </app-notification-box>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="page-title">Dashboard</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="page-info">
+                    <p><a href="#"><img src="../assets/images/tool-icon.png" class="btn btn-info btn-sm"> Customize Dashboard</a></p>
+                    <p class="spacer">|</p>
+                    <p>Mon, Jun 22, 2020</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="grid-cards analytics">
+                    <p class="dismiss"><img src="../assets/images/dismiss-icon.png" /></p>
+                    <div class="clearfix"></div>
+                    <div class="grid-cards-body">
+                        <h4>welcome back! chidimma.</h4>
+                        <p>See overview of analytics and reporting metrics and a lot more interesting stuffs you can do here.</p>
+                        <a href="#" class="btn btn-md">Take a tour</a>
+                    </div>
+                    <div  class="overlay">
+                        <img src="../assets/images/business-insight-bg.png" class="img img-responsive">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="grid-cards optimize">
+                    <div class="grid-cards-body">
+                        <h4>optimized application processing</h4>
+                        <p>We’ve optimized the system to process your application as fast as possible. Click on the button below to get started.</p>
+                        <a href="#" class="btn btn-md">new request</a>
+                    </div>
+                    <div  class="overlay">
+                        <img src="../assets/images/optimize-bg.png" class="img img-responsive">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row card-container">
+            <div class="col-md-4">
+                <app-graph-card 
+                    [cardTitle]="playTitle"
+                    [cardSubTitle]="subTitles"
+                    [cardFirstLabel]="playLabel"
+                    [cardSecondLabel]="spentLabel"
+                    [cardThirdLabel]="balanceLabel"
+                    [total]="playTotal"
+                    [spent]="playSpent"
+                    [chartData]="playChartData"
+                    [chartLabels]="playChartLabel"
+                    [chartColor]="playChartColor"
+                    [cardBodyBackgroundClass]="playCardClass"
+                    [cardBackgroundClass]="whiteBG"
+                ></app-graph-card>
+            </div>
+            <div class="col-md-4">
+                <app-graph-card 
+                    [cardTitle]="workTitle"
+                    [cardSubTitle]="subTitles"
+                    [cardFirstLabel]="workLabel"
+                    [cardSecondLabel]="spentLabel"
+                    [cardThirdLabel]="balanceLabel"
+                    [total]="workTotal"
+                    [spent]="workSpent"
+                    [chartData]="workChartData"
+                    [chartLabels]="workChartLabel"
+                    [chartColor]="workChartColor"
+                    [cardBodyBackgroundClass]="workCardClass"
+                    [cardBackgroundClass]="whiteBG"
+                ></app-graph-card>
+            </div>
+            <div class="col-md-4">
+                <app-graph-card 
+                    [cardTitle]="assetTitle"
+                    [cardSubTitle]="subTitles"
+                    [cardFirstLabel]="assetFirstLabel"
+                    [cardSecondLabel]="assetSecondLabel"
+                    [cardThirdLabel]="assetThirdLabel"
+                    [total]="assetTotal"
+                    [spent]="assetUsed"
+                    [chartData]="assetChartData"
+                    [chartLabels]="assetChartLabel"
+                    [chartColor]="assetChartColor"
+                    [cardBodyBackgroundClass]="assetCardClass"
+                    [cardBackgroundClass]="assetCardBackgroundClass"
+                ></app-graph-card>
+            </div>
+        </div>
+    </div>
+</div>

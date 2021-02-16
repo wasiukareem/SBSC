@@ -1,0 +1,12 @@
+<div class="floating-box {{type}}"  [ngStyle]="{'background':'url('+_background+') #fff', 'background-position':'0px 0px', 'background-repeat':'no-repeat'}"
+>
+    <p>{{heading}}<span>{{description}}</span></p>
+    <a href="{{url}}" class="btn" *ngIf="buttonImage !='no-image'" [ngStyle]="{'background':'#133F77'}">
+        <img src="{{buttonImage}}" />
+        <span >{{buttonText}}</span>
+    </a>
+    <a href="{{url}}" class="btn" *ngIf="buttonImage == 'no-image'" [ngStyle]="{'background':'#FF6542'}">
+        {{buttonText}}
+    </a>
+    <div class="clearfix"></div>
+</div>
